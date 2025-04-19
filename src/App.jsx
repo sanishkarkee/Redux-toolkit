@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import { increment, decrement } from './features/counter/counterSlice';
+import {
+  increment,
+  decrement,
+  resetCount,
+} from './features/counter/counterSlice';
 
 function App() {
   // Reducer ma update bhayeko value lai yaha FETCH gareko ho
@@ -18,7 +22,7 @@ function App() {
   };
 
   const handleResetClick = () => {
-    dispatch(resetcount());
+    dispatch(resetCount());
   };
 
   return (
@@ -27,7 +31,7 @@ function App() {
         <button onClick={handleIncrementClick}>+</button>
         <p>Count: {count}</p>
         <button onClick={handleDecrementClick}>-</button>
-
+        <br />
         <br />
         <button onClick={handleResetClick}>Reset</button>
       </div>
