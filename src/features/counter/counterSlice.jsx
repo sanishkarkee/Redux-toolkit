@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // SLICE
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: 'counter', //  SLICE NAME
 
   // VALUE
   initialState: {
@@ -19,6 +19,10 @@ export const counterSlice = createSlice({
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload;
+    },
+
+    resetcount: (state) => {
+      state.value = 0;
     },
   },
 });
